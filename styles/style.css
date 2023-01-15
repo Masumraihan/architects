@@ -198,15 +198,17 @@ ul li a {
 }
 
 .achievements,
-.sponsor {
+.sponsor,
+.contact {
     padding-top: 8em;
 }
 
 .achievements-text,
 .sponsor-text {
-    max-width: 100%;
+    max-width: 40%;
     padding-bottom: 4em;
 }
+
 
 .achievements-text .title,
 .sponsor .title {
@@ -253,18 +255,51 @@ ul li a {
     gap: 30px;
 }
 
-.sponsor-logo img{
+.sponsor-logo img {
     filter: grayscale(100%);
 }
 
-footer {
-    padding: 6em 0;
+.contact {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-text .title{
+    text-align: center;
+    padding-bottom: .3em;
+}
+.contact form {
+    width: 40%;
+    margin: 0 auto;
+    transform: translateX(-50%, 50%);
 }
 
-.footer-container {
+form input,
+textarea {
+    width: 100%;
+    padding: .8em;
+    margin: .4em;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+.from-control:focus {
+    outline: 2px solid #FF900E;
+}
+
+footer {
+    padding: 6em;
+}
+
+footer .container {
+    margin: 0 auto;
     max-width: 100%;
     background-color: #FFF4E7;
-    padding: 2.5em;
+    padding: 2.5em 0;
     text-align: center;
 }
 
@@ -338,7 +373,7 @@ footer {
 
     .achievements-text,
     .sponsor-text {
-        width: 100%;
+        max-width: 100%;
         padding-bottom: 4em;
         text-align: center;
     }
@@ -347,13 +382,21 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .sponsor-logo img{
+    .sponsor-logo img {
         display: block;
         margin: 0 auto;
     }
 
     .works {
         padding: 0 1.5em;
+    }
+
+    .contact form {
+        width: 70%;
+        transform: translateX(-50%, 50%);
+    }
+    footer {
+        padding: 1.5em;
     }
 }
 
@@ -412,7 +455,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .sponsor-logo img{
+    .sponsor-logo img {
         display: block;
         margin: 0 auto;
     }
